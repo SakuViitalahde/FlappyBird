@@ -29,7 +29,7 @@ class Bird:
         self.tick_count += 1
 
         # Arc movement
-        movement = self.vel * self.tick_count + 1.5 * self.tick_count**2
+        movement = self.velocity * self.tick_count + 1.5 * self.tick_count**2
 
         # MAX SPEED
         if movement >= 16:
@@ -42,7 +42,7 @@ class Bird:
 
         if movement < 0 or self.y < self.height + 50:
             if self.tilt < self.MAX_ROTATION:
-                self.tick_count = MAX_ROTATION
+                self.tick_count = self.MAX_ROTATION
         else:
             if self.tilt > -90:
                 self.tilt -= self.ROTATION_VELOCITY

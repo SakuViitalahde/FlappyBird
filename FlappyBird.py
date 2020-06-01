@@ -25,11 +25,15 @@ def draw_window(win, bird):
 def main():
     bird = Bird(200,200)
     win = pygame.display.set_mode((WIN_WIDTH,WIN_HEIGHT))
+    clock = pygame.time.Clock()
     running = True
     while running:
+        clock.tick(30)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
+        bird.move()
         draw_window(win, bird)
     
     pygame.quit()
