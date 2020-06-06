@@ -29,5 +29,5 @@ class Base:
         win.blit(self.BASE_IMAGE,(self.x2, self.y))
 
     def collide(self, bird):
-        if bird.y + bird.img.get_height() >= 730:
+        if bird.y + bird.img.get_height() >= 730 or bird.y < 0:
             return True

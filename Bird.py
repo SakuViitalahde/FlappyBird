@@ -22,7 +22,7 @@ class Bird:
         self.img = self.IMAGES[0]
     
     def jump(self):
-        self.velocity = -10,5
+        self.velocity = -10.5
         self.tick_count = 0
         self.height = self.y
 
@@ -43,7 +43,7 @@ class Bird:
 
         if movement < 0 or self.y < self.height + 50:
             if self.tilt < self.MAX_ROTATION:
-                self.tick_count = self.MAX_ROTATION
+                self.tilt = self.MAX_ROTATION
         else:
             if self.tilt > -90:
                 self.tilt -= self.ROTATION_VELOCITY
